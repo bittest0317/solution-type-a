@@ -1,5 +1,7 @@
 package problem01;
 
+import java.util.Scanner;
+
 public class Main {
 
 	public static void main(String[] args) {
@@ -20,7 +22,21 @@ public class Main {
 		}
 	}
 	
-	public static int countClap(int number) {
-		return 0;
+	public static int countClap(int number) 
+	{
+		
+
+		int res=0;
+		int clap=0;
+		
+		res = number %10;
+		if(res ==3 || res==6 || res==9) clap++;
+		res = number /10;
+		if(res ==3 || res==6 || res==9) clap++;
+		
+		return clap;
+		
+			
+		
 	}
 }
